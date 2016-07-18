@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="liste_posts col-md-12">
+
+	<div><img src="{{ asset('img/emotionheader5803640522.png') }}" class="image_journal_de_bord">
+	<h2><span class="glyphicon glyphicon-envelope"></span>  Messages des fans</h2>
+	</br>
+	</div>
+
+<div class="col-md-12 posttt">
+		{% for comment in allComment|reverse %}
+ 			<div class="message">
+		 		<div>
+		 			<h4>Titre : {{ comment.titre }}</h4>
+					<h4>Message : {{ comment.contenu }}</h4>
+					<h4>Auteur : {{ comment.auteur }}</h4>
+					<h4>Date : {{ comment.date|date('Y/m/d h:m:s') }}</h4>
+				</div>
+			</div>
+		{% endfor %}
+</div>
+
+<div class="col-md-12">
+	<div class="col-md-3"></div>
+	<div class="formul col-md-3">
+		<div class="col-md-10">
+			<form method="post" action="{{ path("comment")}}">
+				<div class="col-md-12">
+					<p>
+						<label>Titre</label>
+						<input name="titre">
+						</input>
+					</p>
+				</div>
+				<div class="col-md-12">
+					<p>
+						<label>Contenu du message</label>
+						<textarea name="contenu" rows="6" cols="40" placeholder="Saisir un texte ici..."></textarea>
+					</p>
+				</div>
+				<input type="hidden" name="date" value="{{ "now"|date("d/m/Y") }}"/>
+				<div class="col-md-12">
+					<div class="col-md-5"></div>
+					<div class="col-md-3">
+						<input type="submit" class="btn btn-login btn-primary" id="_submit" name="_submit" value="Valider" />
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="col-md-4"></div>
+</div>
+
+</div>
+{% endblock %}

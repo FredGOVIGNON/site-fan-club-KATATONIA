@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+
+     <title>{% block title %}KATATONIA !{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/png" href="{{ asset('yourFavIcon.png') }}">
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/stylesheet.css') }}">
+
+        <script type="text/javascript" src="{{ asset('js/jquery.js') }}" ></script>
+        <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}" ></script> 
+
+    </head>
+
+<body background="../img/Katatonia_-_Fall_Of_Hearts_-_Medium_Res_Cover.jpg")>
+
+{% block body %}
+
+<div class="row1">
+	<div class="register">
+		<div class="col-md-4"></div>
+		<div class="col-md-4 fond">
+			<p>Inscrivez-vous !</p>
+		</div>
+		<div class="col-md-4"></div>
+	</div>
+</div>
+<div class="formu col-md-4 col-md-offset-4">
+</br>
+	{{ form_start(form) }}
+		
+		<div class="col-md-12">
+			<div class="col-md-4">
+				<p> Nom : </p>
+			</div>
+			<div class="col-md-8">
+				{{ form_widget(form.username) }}
+			</div>
+		</div>
+
+		<div class="col-md-12">
+			<div class="col-md-4">
+					<p> E-mail : </p>
+				</div>
+				<div class="col-md-8">
+					{{ form_widget(form.email) }}
+				</div>
+		</div>
+
+		<div class="col-md-12">
+				<div class="col-md-4">
+					<p> Mot de passe : </p>
+				</div>
+				<div class="col-md-8">
+					{{ form_widget(form.plainPassword.first) }}
+				</div>
+		</div>
+
+		<div class="col-md-12">
+				<div class="col-md-4">
+					<p> Confirmez votre mot de passe :</p>
+				</div>
+				<div class="col-md-8">
+					{{ form_widget(form.plainPassword.second) }}
+			    </div>
+		</div>
+
+		<div class="col-md-12">
+				<div class="col-md-4"></div>
+				<div class="col-md-4 cli-widg">
+					<div class="col-md-4"></div>
+					<div class="col-md-4">
+						<input type="submit" class="btn btn-danger" value="Valider">
+					</div>
+					<div class="col-md-4"></div>
+				</div>
+				<div class="col-md-4"></div>
+		</div>
+		
+	{{ form_end(form) }}
+</div>
+
+{% endblock %}
+</body>

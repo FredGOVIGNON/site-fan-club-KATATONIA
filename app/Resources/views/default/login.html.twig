@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+
+     <title>{% block title %}KATATONIA fan website{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/png" href="{{ asset('yourFavIcon.png') }}">
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/stylesheet.css') }}">
+
+        <script type="text/javascript" src="{{ asset('js/jquery.js') }}" ></script>
+        <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}" ></script> 
+
+    </head>
+
+<body background="../img/Katatonia_-_Fall_Of_Hearts_-_Medium_Res_Cover.jpg">
+
+{% block body %}
+
+    {% if error %}
+        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+
+<div><img src="{{ asset('img/Katatonia_logo.png') }}" class="katatonia_logo">
+</div>
+
+<div class="login_general">
+<div class="row1">
+	<div class="login">
+		<div class="col-md-4"></div>
+		<div class="col-md-4 fond">
+			<p>Bienvenue !</p>
+		</div>
+		<div class="col-md-4"></div>
+	</div>
+</div>
+<div class="formu col-md-4 col-md-offset-4">
+
+    <div class="col-md-12">
+    	<div class="col-md-12">
+    <form action="{{ path("user_login_check") }}" method="post">
+		    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+		</br></br>
+			<div class="col-md-12">
+				<div class="col-md-5">
+				    <label for="username"><span>Nom : </span></label>
+				</div>
+				<div class="col-md-7">
+				    <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
+				</div></br>
+			</div>
+			</br>
+			<div class"col-md-12">
+				<div class="col-md-5">
+				    <label for="password"><span>Mot de passe : </span></label>
+				</div>
+				<div class="col-md-7">
+				    <input type="password" id="password" name="_password" required="required" />
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="col-md-4"></div>
+				<div class="col-md-8">
+				    <label for="remember_me"><span>Se souvenir de moi :</span></label>
+				    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="col-md-4"></div>
+				<div class="col-md-4">
+				    <input type="submit" class="btn btn-login btn-primary" id="_submit" name="_submit" value="Valider" />
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+</div>
+</div>
+
+{% endblock %}
+</body>

@@ -1,0 +1,39 @@
+user:
+    resource: "@UserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+# app/config/routing.yml
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+user_register:
+    path:     /registration
+    defaults: { _controller: UserBundle:Registration:register }
+
+user_login:
+    path:     /connect
+    defaults: { _controller: UserBundle:Security:login}
+
+user_login_check:
+    path:    /login/check
+    defaults: { _controller: UserBundle:Security:check }
+
+index:
+    path:    /index
+    defaults: { _controller: AppBundle:Default:index }
+
+comment:
+    path:    /comment
+    defaults: { _controller: UserBundle:Comment:post}
+
+tours:
+    path:   /tours
+    defaults: { _controller: AppBundle:Tours:tours}
+
+albums:
+    path:    /discographie
+    defaults: { _controller: AppBundle:Album:album}
