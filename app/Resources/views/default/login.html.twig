@@ -15,7 +15,9 @@
 
     </head>
 
-<body background="../img/Katatonia_-_Fall_Of_Hearts_-_Medium_Res_Cover.jpg">
+{#<body background="../img/Katatonia_-_Fall_Of_Hearts_-_Medium_Res_Cover.jpg">#}
+
+
 
 {% block body %}
 
@@ -23,6 +25,8 @@
         <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
 
+<video class="video" src="{{ asset('video/Katatonia_Fall_of_Hearts_trailer.mp4') }}" autoplay loop>
+</video>
 
 <div><img src="{{ asset('img/Katatonia_logo.png') }}" class="katatonia_logo">
 </div>
@@ -61,10 +65,11 @@
 				    <input type="password" id="password" name="_password" required="required" />
 				</div>
 			</div>
-			<div class="col-md-12">
-				<div class="col-md-4"></div>
+			<div class="col-md-12"></br>
+			<div class="col-md-5"><a href="./registration"><span><strong>S'inscrire<strong></span></a>
+				</div>
 				<div class="col-md-8">
-				    <label for="remember_me"><span>Se souvenir de moi :</span></label>
+				    <label for="remember_me"><span>Se souvenir de moi</span></label>
 				    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
 				</div>
 			</div>

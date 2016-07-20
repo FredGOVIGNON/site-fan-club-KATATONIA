@@ -12,16 +12,23 @@
         <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
         <script type="text/javascript" src="{{ asset('js/jquery.js') }}" ></script>
         <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}" ></script> 
+        <!-- Menu Toggle Script -->
+        {#<script>
+                $("#menu-toggle").click(function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+                });
+        </script>#}
 
     </head>
     <body>
-        <div id="wrapper">
+        <div id="wrapper" class="toggled">
 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a class="nv-link1" href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>  ACCUEIL
+                    <a class="nv-link1" href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> ACCUEIL
                     </a>
                 </li>
                 </br></br>
@@ -48,7 +55,7 @@
                 </li>
                 <li>
                     <a class="nv-link" href="#"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>  Contact</a>
-                </li></br></br></br></br></br></br></br></br></br></br>
+                </li></br></br></br></br></br>
                 <li>
                     <a class="nv-link" href="./connect">
                         <div class="deconnexion"><span class="glyphicon glyphicon-off" aria-hidden="true"></span>  Se déconnecter</a>
@@ -57,6 +64,75 @@
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+<div id="page-content-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="col-lg-6">
+                    
+
+                    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><img class="gif" src="{{ asset('img/aniarm.gif') }}" align="left">{#<span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>#} Menu</a>
+                </br>
+                    <h4><img src="{{ asset('img/Katatonia_logo.png') }}" class="katatonia_small_logo"></h4>
+                    <p>
+                        <a href="https://fr.wikipedia.org/wiki/Katatonia"><font color="black">Il était une fois un groupe en Suède...</font></a>
+                    </p>
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-5">
+                    <a href="https://twitter.com/KatatoniaBand" class="social-link fa fa-twitter-square fa-3x"></a>
+                    <a href="https://www.instagram.com/katatoniaband" class="social-link fa fa-instagram fa-3x"></a>
+                    <a href="https://www.facebook.com/katatonia" class="social-link fa fa-facebook-square fa-3x"></a>
+                    <a href="https://plus.google.com/100530895418529487860/posts" class="social-link fa fa-google-plus-square fa-3x"></a>
+                    <a href="https://play.spotify.com/artist/2CWWgbxApjbyByxBBCvGTm?play=true&utm_source=open.spotify.com&utm_medium=open" class="social-link fa fa-spotify fa-3x"></a>
+                    <a href="https://www.youtube.com/watch?v=IIGBNc2nFZA&list=PLxsON2ToJlc4iWILkjDvklr1PnQO9x30n" class="social-link fa fa-youtube-square fa-3x"></a>
+                    <a href="https://soundcloud.com/katatonia" class="social-link fa fa-soundcloud fa-3x"></a>
+                </div>
+                </br>
+                </br>
+                </br>
+                </br>
+                <div class="col-lg-4">
+                    <form>
+                        <select class="select" placeholder="menu">
+                            <option class="placeholder">Vote pour ton album préféré !</option>
+                            <option>The Fall Of Hearts (album studio)</option>
+                            <option>Sanctitude (album live)</option>
+                            <option>Dethroned and Uncrowned (album studio/remixes)</option>
+                            <option>Last Fair Day Gone Night (album live)</option>
+                            <option>Dead End Kings (album studio)</option>
+                            <option>Night Is The New Day (album studio)</option>
+                            <option>Live Consternation (album live)</option>
+                            <option>The Great Cold Distance (album studio)</option>
+                            <option>Viva Emptiness (album studio)</option>
+                            <option>Last Fair Deal Gone Down (album studio)</option>
+                            <option>Tonight's Decision (album studio)</option>
+                            <option>Discouraged Ones (album studio)</option>
+                            <option>Brave Murder Day (album studio)</option>
+                            <option>Dance Of December Souls (album studio)</option>
+                        </select>
+                    </form>
+                </div>
+                                        
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- /#page-content-wrapper -->
+
+        {#  </div>  balise fermante de <div id="sidebar-wrapper"> afin de ne pas masquer le body de chaque page par la sidebar par défaut #}
+
+        <!-- /#wrapper -->
+
+        <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+        </script>
+
 {% endif %}
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}

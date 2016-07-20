@@ -5,8 +5,10 @@
 <div class="liste_posts col-md-12">
 
 	<div><img src="{{ asset('img/emotionheader5803640522.png') }}" class="image_journal_de_bord">
-	<h2><span class="glyphicon glyphicon-envelope"></span>  Messages des fans</h2>
+	<div class="col-md-4"></div>
+	<div class="col-md-6"><h2><span class="glyphicon glyphicon-envelope"></span> Messages des fans</h2>
 	</br>
+	</div>
 	</div>
 
 <div class="col-md-12 posttt">
@@ -16,15 +18,15 @@
 		 			<h4>Titre : {{ comment.titre }}</h4>
 					<h4>Message : {{ comment.contenu }}</h4>
 					<h4>Auteur : {{ comment.auteur }}</h4>
-					<h4>Date : {{ comment.date|date('Y/m/d h:m:s') }}</h4>
+					<h4>Date : {{ comment.date }}</h4>
 				</div>
 			</div>
 		{% endfor %}
 </div>
 
 <div class="col-md-12">
-	<div class="col-md-3"></div>
-	<div class="formul col-md-3">
+	<div class="col-md-4"></div>
+	<div class="formul col-md-4">
 		<div class="col-md-10">
 			<form method="post" action="{{ path("comment")}}">
 				<div class="col-md-12">

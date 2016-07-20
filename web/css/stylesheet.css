@@ -19,7 +19,7 @@
 	border: solid black 1px;
 	border-radius: 5px;
 	background-color: rgba(255,0,0,0.3);
-	height: 270px;
+	height: 250px;
 }
 
 body {
@@ -29,6 +29,19 @@ body {
 }
 
 /* CSS page de login (login)*/
+
+.video{
+    position: fixed; 
+    right: 0; 
+    bottom: 0;
+    top: 0;
+    min-width: 100%; 
+    min-height: 100%; 
+    width: auto; 
+    height: auto; 
+    z-index: -100;
+    background-size: cover; 
+}
 
 .katatonia_logo{
     height: 160px;
@@ -53,7 +66,7 @@ input {
 
 /* CSS index sidebar*/
 
- body {
+body {
     overflow-x: hidden;
  }
 
@@ -114,6 +127,16 @@ input {
     border-bottom: solid black 2px;
 }
 
+#menu-toggle{
+    padding-left: 10px;
+    height: 50px;
+}
+
+.gif{
+    margin-right: 20px;
+    width: 60%;
+}
+
 .katatonia_small_logo{
     height: 50px;
     width: 400px;
@@ -153,7 +176,7 @@ input {
 #page-content-wrapper {
     width: 100%;
     position: absolute;
-    padding: 15px;
+    height: 180px;
 }
 
 #wrapper.toggled #page-content-wrapper {
@@ -270,15 +293,27 @@ input {
     }
 }
 
+
+select{
+    padding-right: 20px;
+    margin-left: 80px;
+}
+.glyphicon{
+    height: 40px;
+    width: 40px;
+}
+
 .glyphicon-home{
     padding-right: 20px;
  }
 
 .image-groupe{
-    width: 100%;
+    position: relative;
+    width:100%;
 }
 
 /* CSS COMMENT */
+
 .image_journal_de_bord {
     width: 100%;
     height: 16em;
@@ -298,13 +333,18 @@ input {
 }
 
 .glyphicon-envelope {
-    padding-right: 20px;
+    padding-right: 30px;
     padding-left: 14px;
 }
 
 .posttt {
     overflow: auto;
     height: 350px;
+    background-color: rgb(207,0,15);
+}
+
+.message{
+    background-color: #6C7A89;
 }
 
 .formul {
@@ -323,7 +363,21 @@ textarea {
 
 /* CSS TOURS */
 
-.katatonia_tour{
-    height:100%;
+.row-tours{
+    padding: 0;
+}
+
+.katatonia-tour{
+    height: 800px;
     width: 100%;
 }
+
+.content-kata-img {
+    padding: 0 !important;
+}
+
+.australian-katatonia-tour{
+    height: 800px;
+    width: 100%;
+}
+
