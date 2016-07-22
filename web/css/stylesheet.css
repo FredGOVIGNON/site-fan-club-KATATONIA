@@ -3,12 +3,13 @@
 .register {
 	text-align: center;
 	color: red;
-	border-top: solid blue 1px;
-	border-bottom: solid red 1px;
-	margin-top: 200px;
-	height: 50px;
+/*	border-top: solid blue 1px;
+	border-bottom: solid red 1px;*/
+	margin-top: 40px;
+	height: 40px;
 	padding: 5px;
 }
+
 .fond {
 	border: solid black 1px;
 	border-radius:5px;
@@ -52,11 +53,11 @@ body {
 .login{
 	text-align: center;
 	color: red;
-	border-top: solid blue 1px;
-	border-bottom: solid red 1px;
-	margin-top: 58px;
-	height: 50px;
-	padding: 5px;
+/*	border-top: solid blue 1px;
+	border-bottom: solid red 1px;*/
+	margin-top: 24px;
+	height: 40px;
+	padding: 7px;
 }
 
 input {
@@ -381,3 +382,48 @@ textarea {
     width: 100%;
 }
 
+/* CSS ALBUM DISCOGRAPHIE */
+
+h1{
+    text-align: center;
+    padding-top: 50px;
+}
+h2{
+    padding-left: 10px;
+}
+
+table{
+    text-align: center;
+}
+
+.katatonia-cover{
+    width: 40%;
+}
+
+.katatonia-sanctitude-cover{
+    width: 75%;
+}
+
+.katatonia-gone-night-cover{
+    width: 75%;
+}
+
+.katatonia-dead-end-kings-cover{
+    width: 75%;
+}
+
+.katatonia-dead-end-kings-cover{
+    width: 40%;
+}
+
+.katatonia-night-is-the-new-day-cover{
+    width: 75%;
+}
+
+.katatonia-dethroned-cover{
+    width: 75%;
+}
+.azerty {
+    margin-left: 1px !important;
+    padding-left: 1px !important;
+}

@@ -19,11 +19,13 @@
 
 {% block body %}
 
+
 <div class="row1">
+	<div><img src="{{ asset('img/Katatonia_logo.png') }}" class="katatonia_logo"></div>
 	<div class="register">
 		<div class="col-md-4"></div>
 		<div class="col-md-4 fond">
-			<p>Inscrivez-vous !</p>
+			<p><strong>Inscrivez-vous !</strong></p>
 		</div>
 		<div class="col-md-4"></div>
 	</div>
@@ -34,7 +36,7 @@
 		
 		<div class="col-md-12">
 			<div class="col-md-4">
-				<p> Nom : </p>
+				<p><strong> Nom : </strong></p>
 			</div>
 			<div class="col-md-8">
 				{{ form_widget(form.username) }}
@@ -43,7 +45,7 @@
 
 		<div class="col-md-12">
 			<div class="col-md-4">
-					<p> E-mail : </p>
+					<p><strong> E-mail : </strong></p>
 				</div>
 				<div class="col-md-8">
 					{{ form_widget(form.email) }}
@@ -52,7 +54,7 @@
 
 		<div class="col-md-12">
 				<div class="col-md-4">
-					<p> Mot de passe : </p>
+					<p><strong> Mot de passe :</strong></p>
 				</div>
 				<div class="col-md-8">
 					{{ form_widget(form.plainPassword.first) }}
@@ -61,7 +63,7 @@
 
 		<div class="col-md-12">
 				<div class="col-md-4">
-					<p> Confirmez :</p>
+					<p><strong> Confirmez :</strong></p>
 				</div>
 				<div class="col-md-8">
 					{{ form_widget(form.plainPassword.second) }}
