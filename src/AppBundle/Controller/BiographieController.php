@@ -6,13 +6,13 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
-class AlbumController extends Controller
+class BiographieController extends Controller
 {
-    public function albumAction(Request $request)
+    public function biographieAction(Request $request)
     {
         // replace this example code with whatever you need
-        return $this->render('default/album.html.twig', array(
-            'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
+        return $this->render('default/biographie.html.twig', array(
+            
         ));
     }
 }

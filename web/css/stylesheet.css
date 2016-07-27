@@ -1,4 +1,4 @@
-/* CSS page d'enregistrement (register)*/
+/* CSS page d'enregistrement (registration)*/
 
 .register {
 	text-align: center;
@@ -29,7 +29,7 @@ body {
 	/*opacity:0.6;*/
 }
 
-/* CSS page de login (login)*/
+/* CSS page de connexion (login)*/
 
 .video{
     position: fixed; 
@@ -68,7 +68,7 @@ input {
 /* CSS index sidebar*/
 
 body {
-    overflow-x: hidden;
+
  }
 
 .nv-link1 {
@@ -84,7 +84,7 @@ body {
 	margin-left: -20px;
 }
 
-.glyphicon-road{
+.glyphicon-user{
 	margin-left: -20px;
 }
 
@@ -116,7 +116,7 @@ body {
     margin-left: -20px;
 }
 
-.deconnection{
+.deconnexion{
     border-top: solid red 1px;
 }
 
@@ -124,12 +124,14 @@ body {
 /* INDEX Toggle Styles */
 
 #page-content-wrapper{
-	background-color: rgb(207,0,15);
+	background-color: rgb(217, 30, 24);
     border-bottom: solid black 2px;
+    position: fixed;
+    z-index: 1;
 }
 
 #menu-toggle{
-    padding-left: 10px;
+    padding-left: 20px;
     height: 50px;
 }
 
@@ -176,8 +178,9 @@ body {
 
 #page-content-wrapper {
     width: 100%;
-    position: absolute;
-    height: 180px;
+    position: fixed;
+    height: 190px;
+    z-index: 1;
 }
 
 #wrapper.toggled #page-content-wrapper {
@@ -218,7 +221,24 @@ body {
     color: silver;
 }
 
+.image-groupe{
+    position: relative;
+    width: 100%;
+}
+
+.image-index{
+    z-index: 2;
+}
+
+
+
 /* BASE Sidebar Styles */
+
+#empty-navbar{
+    height: 172px;
+    background-color: blue;
+    display:none;
+}
 
 .sidebar-nav {
     position: absolute;
@@ -285,7 +305,8 @@ body {
 
     #page-content-wrapper {
         padding: 20px;
-        position: relative;
+        position: fixed;
+        width: 100%;
     }
 
     #wrapper.toggled #page-content-wrapper {
@@ -299,6 +320,7 @@ select{
     padding-right: 20px;
     margin-left: 80px;
 }
+
 .glyphicon{
     height: 40px;
     width: 40px;
@@ -308,9 +330,72 @@ select{
     padding-right: 20px;
  }
 
-.image-groupe{
+.glyphicon-cd{
+    padding-right: 20px;
+ }
+
+
+ /* Modal Header */
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: black;
+    color: red;
+}
+
+#myBtn{
+    width: 25%;
+    margin-left: 100px;
+    border-radius: 10px;
+    background-color: #D2D7D3;
+}
+
+/* Modal Body */
+
+.modal-body {padding: 2px 16px;}
+
+/* Modal Footer */
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: black;
+    color: red;
+}
+
+/* Modal Content */
+
+.modal-content {
     position: relative;
-    width:100%;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 41%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+.iconemodal {
+    margin-left: 1px !important;
+}
+
+.btn-vote {
+    text-align: center;
 }
 
 /* CSS COMMENT */
@@ -324,7 +409,6 @@ select{
     width: 100%;
     height: 15em;
     color: #19B5FE;
-    background-color: green;
 }
 
 .message{
@@ -345,14 +429,14 @@ select{
 }
 
 .message{
-    background-color: #6C7A89;
+    background-color: #ABB7B7;
 }
 
 .formul {
     text-align: center;
     margin-top: 30px;
     width: 450px;
-    background-color: rgba(207,0,1,0.9);
+    background-color: #CF000F;
     height: 300%;
     border: solid black 1px;
     border-radius: 5px ;
@@ -360,6 +444,19 @@ select{
 
 textarea {
     resize: none;
+}
+
+.photo-logo-medaillon{
+    border-radius: 80px;
+    margin-left: 60px;
+    margin-top: 30px;
+}
+
+.photo-ecriture{
+    width: 16%;
+    border-radius: 190px;
+    margin-top: 30px;
+    margin-left: 40px;
 }
 
 /* CSS TOURS */
@@ -382,12 +479,18 @@ textarea {
     width: 100%;
 }
 
-/* CSS ALBUM DISCOGRAPHIE */
+/* CSS ALBUM-DISCOGRAPHIE */
+
+.row2{
+    padding-bottom: 50px;
+}
 
 h1{
     text-align: center;
-    padding-top: 50px;
+    padding-top: 80px;
+    margin-top: 0;
 }
+
 h2{
     padding-left: 10px;
 }
@@ -396,34 +499,98 @@ table{
     text-align: center;
 }
 
-.katatonia-cover{
-    width: 40%;
+/*.katatonia-discouraged-cover{
+    width: 50%;
 }
 
-.katatonia-sanctitude-cover{
-    width: 75%;
-}
+.katatonia-brave-cover{
+    width: 45%;
+}*/
 
-.katatonia-gone-night-cover{
-    width: 75%;
-}
-
-.katatonia-dead-end-kings-cover{
-    width: 75%;
-}
-
-.katatonia-dead-end-kings-cover{
-    width: 40%;
-}
-
-.katatonia-night-is-the-new-day-cover{
-    width: 75%;
-}
-
-.katatonia-dethroned-cover{
-    width: 75%;
-}
 .azerty {
     margin-left: 1px !important;
-    padding-left: 1px !important;
+}
+
+.cercle{
+    text-align: center;
+}
+
+.album_signing{
+    width: 70%;
+    border-radius: 100px;
+}
+
+/* CSS BIOGRAPHIE */
+
+.photo-groupe-2016{
+    width: 100%;
+}
+
+.photo-logos-groupe{
+    width: 60%;
+    border-radius: 20px;
+    margin-top: -10px;
+}
+
+.introducing-line-up{
+    text-align: center;
+}
+
+.photo-drumkit{
+    width: 90%;
+}
+
+.drumkit{
+    margin-top: 100px;
+}
+
+.bouton{
+    position:relative;
+}
+.bouton a {
+display: block;
+width: 150px;
+line-height: 50px;
+text-align: center;
+vertical-align: middle;
+background: url(/img.bouton-noir.png) repeat;
+color: white;
+text-decoration: none;
+}
+
+.bouton a:hover {
+background: url(/img/bouton-noir-2.png) no-repeat;
+}
+
+/* CSS CHRONIQUES */
+
+.nightcover{
+    width: 80%;
+}
+
+.starchro{
+    margin-right: -20px;
+}
+
+.fleche {
+    height: 10px;
+    width: 20px;
+}
+
+.metalobscover35{
+    width: 110%;
+}
+
+.logo-noise-web{
+    width: 110%;
+    height: 150px;
+    border-radius: 20px;
+}
+
+.lien-download-chro1{
+    text-align: center;
+}
+
+.autres-chros{
+    margin-top: 50px;
 }

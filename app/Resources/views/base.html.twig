@@ -12,16 +12,10 @@
         <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
         <script type="text/javascript" src="{{ asset('js/jquery.js') }}" ></script>
         <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}" ></script> 
-        <!-- Menu Toggle Script -->
-        {#<script>
-                $("#menu-toggle").click(function(e) {
-                e.preventDefault();
-                $("#wrapper").toggleClass("toggled");
-                });
-        </script>#}
 
     </head>
     <body>
+    
         <div id="wrapper" class="toggled">
 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
         <!-- Sidebar -->
@@ -36,16 +30,16 @@
                     <a class="nv-link" href="./index"><span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>  Tableau de bord</a>
                 </li>
                 <li>
-                    <a class="nv-link" href="https://fr.wikipedia.org/wiki/Katatonia"><span class="glyphicon glyphicon-road" aria-hidden="true"></span>  Biographie</a>
+                    <a class="nv-link" href="./biographie"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>  Biographie</a>
                 </li>
                 <li>
                     <a class="nv-link" href="./discographie"><span class="glyphicon glyphicon-cd" aria-hidden="true"></span>  Discographie</a>
                 </li>
                 <li>
-                    <a class="nv-link" href="#"><span class=" glyphicon glyphicon-sunglasses" aria-hidden="true"></span> Interviews</a>
+                    <a class="nv-link" href="./chroniques"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>  Chroniques</a>
                 </li>
                 <li>
-                    <a class="nv-link" href="#"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>  Albums reviews</a>
+                    <a class="nv-link" href="./interviews"><span class=" glyphicon glyphicon-sunglasses" aria-hidden="true"></span>  Interviews</a>
                 </li>
                 <li>
                     <a class="nv-link" href="./tours"><span class="glyphicon glyphicon-plane" aria-hidden="true"></span>  Tours</a>
@@ -71,8 +65,6 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="col-lg-6">
-                    
-
                     <a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><img class="gif" src="{{ asset('img/aniarm.gif') }}" align="left">{#<span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>#} Menu</a>
                 </br>
                     <h4><img src="{{ asset('img/Katatonia_logo.png') }}" class="katatonia_small_logo"></h4>
@@ -94,26 +86,76 @@
                 </br>
                 </br>
                 </br>
-                <div class="col-lg-4">
-                    <form>
-                        <select class="select" placeholder="menu">
-                            <option class="placeholder">Vote pour ton album préféré !</option>
-                            <option>The Fall Of Hearts (album studio)</option>
-                            <option>Sanctitude (album live)</option>
-                            <option>Dethroned and Uncrowned (album studio/remixes)</option>
-                            <option>Last Fair Day Gone Night (album live)</option>
-                            <option>Dead End Kings (album studio)</option>
-                            <option>Night Is The New Day (album studio)</option>
-                            <option>Live Consternation (album live)</option>
-                            <option>The Great Cold Distance (album studio)</option>
-                            <option>Viva Emptiness (album studio)</option>
-                            <option>Last Fair Deal Gone Down (album studio)</option>
-                            <option>Tonight's Decision (album studio)</option>
-                            <option>Discouraged Ones (album studio)</option>
-                            <option>Brave Murder Day (album studio)</option>
-                            <option>Dance Of December Souls (album studio)</option>
-                        </select>
-                    </form>
+                <div>
+                       <!-- Trigger/Open The Modal -->
+                        <button id="myBtn"><span class="glyphicon glyphicon-hand-right"></span>Votez pour votre album préféré !<span class="glyphicon glyphicon-heart" aria-hidden="true"></span></button>
+
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
+
+                          <!-- Modal content -->
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <span class="close"><font color="white">X</font></span>
+                              <h2>Votez pour votre album préféré ! <span class="glyphicon glyphicon-cd iconemodal" aria-hidden="true"></span></h2>
+                            </div>
+                            <div class="modal-body">
+                                <select class="select" placeholder="menu">
+                                    <option class="placeholder">Liste des albums</option>
+                                    <option>The Fall Of Hearts (album studio)</option>
+                                    <option>Sanctitude (album live)</option>
+                                    <option>Dethroned and Uncrowned (album studio/remixes)</option>
+                                    <option>Last Fair Day Gone Night (album live)</option>
+                                    <option>Dead End Kings (album studio)</option>
+                                    <option>Night Is The New Day (album studio)</option>
+                                    <option>Live Consternation (album live)</option>
+                                    <option>The Great Cold Distance (album studio)</option>
+                                    <option>Viva Emptiness (album studio)</option>
+                                    <option>Last Fair Deal Gone Down (album studio)</option>
+                                    <option>Tonight's Decision (album studio)</option>
+                                    <option>Discouraged Ones (album studio)</option>
+                                    <option>Brave Murder Day (album studio)</option>
+                                    <option>Dance Of December Souls (album studio)</option>
+                                </select></br></br>
+                        <div class="btn-vote"><input type="submit" class="btn btn-danger" text-align: "center" value="Vote">
+                        </div></br>
+                            </div>
+                            <div class="modal-footer">
+                              <h3>Résultat du vote à la rubrique "Discographie"</h3>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <script>
+                        // Get the modal
+                        var modal = document.getElementById('myModal');
+
+                        // Get the button that opens the modal
+                        var btn = document.getElementById("myBtn");
+
+                        // Get the <span> element that closes the modal
+                        var span = document.getElementsByClassName("close")[0];
+
+                        // When the user clicks the button, open the modal 
+                        btn.onclick = function() {
+                            modal.style.display = "block";
+                        }
+
+                        // When the user clicks on <span> (x), close the modal
+                        span.onclick = function() {
+                            modal.style.display = "none";
+                        }
+
+                        // When the user clicks anywhere outside of the modal, close it
+                        window.onclick = function(event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        }
+                        </script>
+
+
                 </div>
                                         
             </div>
@@ -121,20 +163,38 @@
     </div>
 </div>
         <!-- /#page-content-wrapper -->
-
+     
         {#  </div>  balise fermante de <div id="sidebar-wrapper"> afin de ne pas masquer le body de chaque page par la sidebar par défaut #}
 
         <!-- /#wrapper -->
+
+{% endif %}
+<div class="effet jquery">
+</div>
+<div id="empty-navbar">
+    </div>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
 
         <script>
         $("#menu-toggle").click(function(e) {
             e.preventDefault();
             $("#wrapper").toggleClass("toggled");
         });
-        </script>
 
-{% endif %}
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        $("#menu-toggle").click(function()
+        {
+            if ($("#empty-navbar").hasClass("open"))
+            {
+                $("#empty-navbar").css("display", "none");
+                $("#empty-navbar").removeClass("open");
+            }
+            else
+            {
+                $("#empty-navbar").css("display", "block");
+                $("#empty-navbar").addClass("open");
+            }
+        });
+        </script>
     </body>
 </html>

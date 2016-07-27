@@ -34,6 +34,18 @@ tours:
     path:   /tours
     defaults: { _controller: AppBundle:Tours:tours}
 
-albums:
+discographie:
     path:    /discographie
-    defaults: { _controller: AppBundle:Album:album}
+    defaults: { _controller: AppBundle:Disco:album}
+
+biographie:
+    path:    /biographie
+    defaults: { _controller: AppBundle:Biographie:biographie}
+
+chroniques:
+    path:    /chroniques
+    defaults: { _controller: AppBundle:Review:review}
+
+interviews:
+    path:    /interviews
+    defaults: { _controller: AppBundle:Intw:intw}
