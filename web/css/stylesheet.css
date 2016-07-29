@@ -2,25 +2,34 @@
 
 .register {
 	text-align: center;
-	color: red;
+	color: white;
 /*	border-top: solid blue 1px;
 	border-bottom: solid red 1px;*/
 	margin-top: 40px;
-	height: 40px;
+	height: 30px;
 	padding: 5px;
 }
 
 .fond {
 	border: solid black 1px;
-	border-radius:5px;
-	background-color: blue;
+	border-radius: 5px;
+	background-color: #333;
+    padding-top: 5px;
 }
 
 .formu {
 	border: solid black 1px;
 	border-radius: 5px;
-	background-color: rgba(255,0,0,0.3);
+	background-color: rgba(192, 57, 43, 0.5);
 	height: 250px;
+}
+
+.inscrire{
+    color: #333;
+}
+
+.btn{
+    background-color: black;
 }
 
 body {
@@ -52,7 +61,8 @@ body {
 
 .login{
 	text-align: center;
-	color: red;
+	color: white;
+    font-size: 16px;
 /*	border-top: solid blue 1px;
 	border-bottom: solid red 1px;*/
 	margin-top: 24px;
@@ -72,15 +82,16 @@ body {
  }
 
 .nv-link1 {
- 	border-bottom: solid red 1px;
- 	color: rgb(207,0,15) !important;
+    border-bottom: solid red 1px;
+    color: rgb(207,0,15) !important;
 }
 
 .nv-link {
  	color: rgb(207,0,15) !important;
+    width: 200%;
 }
 
-.glyphicon-blackboard{
+.glyphicon-info-sign{
 	margin-left: -20px;
 }
 
@@ -230,14 +241,12 @@ body {
     z-index: 2;
 }
 
-
-
 /* BASE Sidebar Styles */
 
 #empty-navbar{
     height: 172px;
     background-color: blue;
-    display:none;
+    display: block;
 }
 
 .sidebar-nav {
@@ -310,7 +319,7 @@ body {
     }
 
     #wrapper.toggled #page-content-wrapper {
-        position: relative;
+        position: fixed;
         margin-right: 0;
     }
 }
@@ -345,7 +354,7 @@ select{
 
 #myBtn{
     width: 25%;
-    margin-left: 100px;
+    margin-left: 50px;
     border-radius: 10px;
     background-color: #D2D7D3;
 }
@@ -398,7 +407,11 @@ select{
     text-align: center;
 }
 
-/* CSS COMMENT */
+.danger {
+    background-color: rgb(217, 30, 24);
+}
+
+/* CSS COMMENTS */
 
 .image_journal_de_bord {
     width: 100%;
@@ -424,8 +437,9 @@ select{
 
 .posttt {
     overflow: auto;
-    height: 350px;
+    height: 600px;
     background-color: rgb(207,0,15);
+    border-radius: 30px;
 }
 
 .message{
@@ -446,20 +460,27 @@ textarea {
     resize: none;
 }
 
-.photo-logo-medaillon{
-    border-radius: 80px;
-    margin-left: 60px;
-    margin-top: 30px;
+h3{
+    text-align: center;
 }
 
 .photo-ecriture{
-    width: 16%;
-    border-radius: 190px;
-    margin-top: 30px;
-    margin-left: 40px;
+    width: 60%;
+    border-radius: 200px;
+    margin-top: 100px;
+    margin-left: 80px;
 }
 
-/* CSS TOURS */
+.photo-groupe-biere{
+    width: 58%;
+    border-radius: 20px;
+}
+
+.biere{
+    margin-top: -20px;
+}
+
+/* CSS TOURNEES */
 
 .row-tours{
     padding: 0;
@@ -468,6 +489,7 @@ textarea {
 .katatonia-tour{
     height: 800px;
     width: 100%;
+    border-radius: 20px;
 }
 
 .content-kata-img {
@@ -477,6 +499,7 @@ textarea {
 .australian-katatonia-tour{
     height: 800px;
     width: 100%;
+    border-radius: 20px;
 }
 
 /* CSS ALBUM-DISCOGRAPHIE */
@@ -499,14 +522,6 @@ table{
     text-align: center;
 }
 
-/*.katatonia-discouraged-cover{
-    width: 50%;
-}
-
-.katatonia-brave-cover{
-    width: 45%;
-}*/
-
 .azerty {
     margin-left: 1px !important;
 }
@@ -518,6 +533,10 @@ table{
 .album_signing{
     width: 70%;
     border-radius: 100px;
+}
+
+.katatonia-livre-cover{
+    width: 60%;
 }
 
 /* CSS BIOGRAPHIE */
@@ -534,6 +553,11 @@ table{
 
 .introducing-line-up{
     text-align: center;
+    margin-bottom: -40px;
+}
+
+.photo-introducing-line-up{
+    width: 40%;
 }
 
 .photo-drumkit{
@@ -547,6 +571,7 @@ table{
 .bouton{
     position:relative;
 }
+
 .bouton a {
 display: block;
 width: 150px;
@@ -593,4 +618,10 @@ background: url(/img/bouton-noir-2.png) no-repeat;
 
 .autres-chros{
     margin-top: 50px;
+}
+
+/* CSS INTERVIEWS */
+
+.titre-intw1{
+    text-align: center;
 }

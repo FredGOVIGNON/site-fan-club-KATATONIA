@@ -1,22 +1,45 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<div class='conteneur col-md-12'></br></br></br>
+<div class='conteneur col-md-12'></br></br></br></br></br>
        <div class="row2 col-md-12 ">
               <div class="col-md-1"></div>
               <div class="col-md-3 cercle">
                      <img src="{{ asset('img/katatonia_record_signing.png') }}" class="album_signing">
               </div>
               <div class="col-md-8">
-                     <h2> <span class="glyphicon glyphicon-circle-arrow-right"></span>Résultat du vote de votre album préféré :</br>ALBUM </br>
+                     <h2><span class="glyphicon glyphicon-circle-arrow-right"></span>Résultat du vote de votre album préféré :</br>ALBUM </br>
        	      note :   
                      <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                      <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                      <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                      <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                     <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></h2>
-              </div></br>
-       </div>
+                     <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></h2></br></br>
+              </div>
+              {% for vote in allVote %}
+              <table class="resultat-vote">
+                     <tr>
+                     <th>album</th>
+                     <th>note</th>
+                     </tr>
+                     <tr>
+                            <td>The Fall Of Hearts (album studio) : {{ vote.value }}</td>
+                            <td>Sanctitude (album live) : {{ vote.value }}</td>
+                            <td>Dethroned and Uncrowned (album studio/remixes) : {{ vote.value }}</td>
+                            <td>Last Fair Day Gone Night (album live) : {{vote.value }}</td>
+                            <td>Dead End Kings (album studio) : {{ vote.value }}</td>                                    <td>Night Is The New Day (album studio) : {{ vote.value }}</td>
+                            <td>Live Consternation (album live) : {{ vote.value }}</td>
+                            <td>The Great Cold Distance (album studio) : {{ vote.value }}</td>
+                            <td>Viva Emptiness (album studio) : {{ vote.value }}</td>
+                            <td>Last Fair Deal Gone Down (album studio) : {{ vote.value }}</td>
+                            <td>Tonight's Decision (album studio) : {{ vote.value }}</td>
+                            <td>Discouraged Ones (album studio) : {{ vote.value }}</td>
+                            <td>Brave Murder Day (album studio) : {{ vote.value }}</td>
+                            <td>Dance Of December Souls (album studio) : {{ vote.value }}</td>
+              </tr>
+              </br>
+              {% endfor %}
+       </div></br>
        <h1><span class="glyphicon glyphicon-cd"></span><u> DISCOGRAPHIE </u><span class="glyphicon glyphicon-cd azerty"></span></h1>
        <div class="albums col-lg-12"></br></br>
        	<div class="table offset-1-col-lg-10">
@@ -110,8 +133,26 @@
 
                	</tr>
 
-              	</table>
+              	</table></br></br></br>
        	</div>
+       </div></br></br></br></br>
+
+       <h1><span class="glyphicon glyphicon-book"></span><u> BIBLIOGRAPHIE </u><span class="glyphicon glyphicon-book azerty"></span></h1>
+</br></br></br>
+<div class="col-md-12 biblio">
+       <div class="col-md-3 col-md-offset-1 cover-livre">
+       <img src="{{ asset('img/katatonia-sousuncieldeplomb.jpg') }}" class="katatonia-livre-cover">
        </div>
+       <div class="col-md-7 pitch-livre">
+       <p><b>KATATONIA</b></br>
+       Sous un ciel de plomb</br>
+       (Edition Camion blanc/© 2015)</br>
+       <u>Résumé</u> : Formé en 1991 par Jonas Renkse et Anders Nyström, Katatonia est le reflet de l’atmosphère ténébreuse qui règne à cette époque en Suède et qui contribue au développement d’un genre musical teinté de nuances gris noir. Hier formation de Doom Death réservée à quelques spécialistes, désormais groupe de Rock/Métal aux contours sonores plus modernes et accessibles, Katatonia possède, tel le dieu Janus de la Rome antique, deux visages biens distincts : le premier représente le passé, l’autre l’avenir. La dimension musicale de la formation suédoise ne s’est toutefois jamais départie de la noirceur et de la mélancolie qu’égrène chaque note de sa musique. Une posture idéologique qui, loin de consacrer son succès commercial, a néanmoins conféré à Katatonia un statut de formation emblématique, pour ne pas dire culte, de la scène Métal. Après un premier essai sur Opeth, Nicolas Bénard, docteur en histoire, et Robert Culat, prêtre catholique, proposent une nouvelle monographie à quatre mains qui vise à illustrer l’originalité de la scène métal suédoise.
+       </p>
+       </br>
+       <p><span class="glyphicon fleche glyphicon-circle-arrow-right"></span>Pour le commander, rendez-vous à cette <a href="http://www.camionblanc.com/detail-livre-katatonia-sous-un-ciel-de-plomb-486.php"><strong>adresse</strong></a>.</p>
+       </br>
+       </div>
+</div>
 </div>
 {% endblock %}
