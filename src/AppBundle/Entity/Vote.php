@@ -24,21 +24,21 @@ class Vote
     /**
      * @var string
      *
-     * @ORM\Column(name="iduser", type="string", length=255, nullable=true, unique=true)
+     * @ORM\Column(name="iduser", type="string", length=255, nullable=true)
      */
     private $iduser;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="idalbum", type="string", length=255, nullable=true, unique=true)
+     * @ORM\Column(name="idalbum", type="string", length=255, nullable=true)
      */
     private $idalbum;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="value", type="integer", nullable=true, unique=true)
+     * @ORM\Column(name="value", type="integer", nullable=true)
      */
     private $value;
 

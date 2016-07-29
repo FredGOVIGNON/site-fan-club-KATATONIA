@@ -38,6 +38,10 @@ discographie:
     path:    /discographie
     defaults: { _controller: AppBundle:Disco:album}
 
+vote:
+    path:    /vote
+    defaults: { _controller: AppBundle:Disco:vote}
+
 biographie:
     path:    /biographie
     defaults: { _controller: AppBundle:Biographie:biographie}

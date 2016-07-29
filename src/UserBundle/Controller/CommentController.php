@@ -26,6 +26,7 @@ class CommentController extends Controller
 	{
 
 		$em=$this->getDoctrine()->getManager();
+        $albums = $em->getRepository('AppBundle:Album')->findAll();
         
         $user = $this->container->get('security.context')->getToken()->getUser();
         
@@ -49,6 +50,7 @@ class CommentController extends Controller
 
         return $this->render('default/comment.html.twig', array(
             'allComment' => $allComment,
+            'albums' => $albums,
         ));  
 	}
 }

@@ -88,7 +88,7 @@ body {
 
 .nv-link {
  	color: rgb(207,0,15) !important;
-    width: 200%;
+    font-size: 18px;
 }
 
 .glyphicon-info-sign{
@@ -129,6 +129,7 @@ body {
 
 .deconnexion{
     border-top: solid red 1px;
+    padding-top: 10px;
 }
 
 
@@ -327,12 +328,15 @@ body {
 
 select{
     padding-right: 20px;
-    margin-left: 80px;
 }
 
 .glyphicon{
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
+}
+
+.glyphicon-heart{
+    width: 20px !important;
 }
 
 .glyphicon-home{
@@ -361,7 +365,10 @@ select{
 
 /* Modal Body */
 
-.modal-body {padding: 2px 16px;}
+.modal-body {
+    padding: 2px 16px;
+    text-align: center;
+}
 
 /* Modal Footer */
 
@@ -379,7 +386,9 @@ select{
     margin: auto;
     padding: 0;
     border: 1px solid #888;
-    width: 41%;
+    border-radius: 20px;
+    text-align: center;
+    width: 35%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
@@ -401,6 +410,7 @@ select{
 
 .iconemodal {
     margin-left: 1px !important;
+    width: 10px;
 }
 
 .btn-vote {
@@ -487,8 +497,7 @@ h3{
 }
 
 .katatonia-tour{
-    height: 800px;
-    width: 100%;
+    width: 80%;
     border-radius: 20px;
 }
 
@@ -518,7 +527,17 @@ h2{
     padding-left: 10px;
 }
 
-table{
+table{    
+    text-align: center;
+}
+
+.resultat-vote{
+    margin-top: 10px;
+    margin-left: 200px;
+    text-align: center;
+}
+
+th, td{
     text-align: center;
 }
 
@@ -533,6 +552,10 @@ table{
 .album_signing{
     width: 70%;
     border-radius: 100px;
+}
+
+.td{
+    padding-bottom: 12px;
 }
 
 .katatonia-livre-cover{
@@ -624,4 +647,9 @@ background: url(/img/bouton-noir-2.png) no-repeat;
 
 .titre-intw1{
     text-align: center;
+}
+
+.katatonia-cross{
+    width: 70%;
+    border-radius: 20px;
 }
