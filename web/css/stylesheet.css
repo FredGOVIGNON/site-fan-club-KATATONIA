@@ -136,7 +136,7 @@ body {
 /* INDEX Toggle Styles */
 
 #page-content-wrapper{
-	background-color: rgb(217, 30, 24);
+	background-color: rgb(207, 0, 15);
     border-bottom: solid black 2px;
     position: fixed;
     z-index: 1;
@@ -350,17 +350,24 @@ select{
 
  /* Modal Header */
 
+
+#myBtn{
+    width: 14%;
+    margin-left: 58px;
+    border-radius: 10px;
+    background-color: #D2D7D3;
+}
+
+.glyphicon-hand-right {
+    margin-left: -60px;
+    width: 10%;
+    padding-left: 110px;
+}
+
 .modal-header {
     padding: 2px 16px;
     background-color: black;
     color: red;
-}
-
-#myBtn{
-    width: 25%;
-    margin-left: 50px;
-    border-radius: 10px;
-    background-color: #D2D7D3;
 }
 
 /* Modal Body */
@@ -496,17 +503,38 @@ h3{
     padding: 0;
 }
 
-.katatonia-tour{
-    width: 80%;
-    border-radius: 20px;
+.katatonia-stage{
+    width: 60%;
+    border-radius: 160px;
+    text-align: center;
+}
+
+
+.katatonia-pass-stage{
+    width: 60%;
+    border-radius: 160px;
+    text-align: center;
+    -webkit-transform:rotate(180deg); /*Safari 3.1+/Chrome*/
+    -o-transform:rotate(180deg);  /*Opera 10.5+*/
+    -moz-transform: rotate(180deg); /*Firefox 3.5+*/
+}
+
+.live-stage{
+    text-align: center;
 }
 
 .content-kata-img {
-    padding: 0 !important;
+    padding: 40px !important;
+}
+
+.european-katatonia-tour{
+    width: 100%;
+    /*height: 518px;*/
+    border-radius: 20px;
 }
 
 .australian-katatonia-tour{
-    height: 800px;
+    /*height: 500px;*/
     width: 100%;
     border-radius: 20px;
 }
@@ -525,6 +553,10 @@ h1{
 
 h2{
     padding-left: 10px;
+}
+
+.starvote{
+    margin-left: 160px;
 }
 
 table{    
@@ -550,8 +582,8 @@ th, td{
 }
 
 .album_signing{
-    width: 70%;
-    border-radius: 100px;
+    width: 80%;
+    border-radius: 160px;
 }
 
 .td{
@@ -564,14 +596,24 @@ th, td{
 
 /* CSS BIOGRAPHIE */
 
-.photo-groupe-2016{
-    width: 100%;
+.katatonia-vin{
+    text-align:center;
+}
+
+.photo-vin{
+    width: 20%;
+    border-radius: 160px;
+    text-align: center;
 }
 
 .photo-logos-groupe{
     width: 60%;
     border-radius: 20px;
     margin-top: -10px;
+}
+
+.photo-groupe-2016{
+    width: 100%;
 }
 
 .introducing-line-up{
@@ -617,7 +659,7 @@ background: url(/img/bouton-noir-2.png) no-repeat;
 }
 
 .starchro{
-    margin-right: -20px;
+    margin-right: -30px;
 }
 
 .fleche {
@@ -626,11 +668,11 @@ background: url(/img/bouton-noir-2.png) no-repeat;
 }
 
 .metalobscover35{
-    width: 110%;
+    width: 120%;
 }
 
 .logo-noise-web{
-    width: 110%;
+    width: 120%;
     height: 150px;
     border-radius: 20px;
 }
@@ -650,6 +692,27 @@ background: url(/img/bouton-noir-2.png) no-repeat;
 }
 
 .katatonia-cross{
-    width: 70%;
+    width: 80%;
+    height: 600px;
     border-radius: 20px;
+}
+
+.txt-intw1{
+    margin-top: 20px;
+}
+
+.promo-photo{
+    text-align: center;
+}
+
+.katatonia-promo-photo{
+    width: 60%;
+}
+
+.katatonia-boisson{
+    width: 40%;
+}
+
+.ref-disco{
+    margin-top: 80px;
 }

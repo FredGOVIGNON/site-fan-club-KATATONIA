@@ -14,9 +14,13 @@ user_register:
     path:     /registration
     defaults: { _controller: UserBundle:Registration:register }
 
+user_register_confirmed:
+    path:     /index
+    defaults: { _controller: AppBundle:Default:index }
+
 user_login:
     path:     /connect
-    defaults: { _controller: UserBundle:Security:login}
+    defaults: { _controller: UserBundle:Security:login }
 
 user_login_check:
     path:    /login/check
@@ -28,28 +32,32 @@ index:
 
 comment:
     path:    /comment
-    defaults: { _controller: UserBundle:Comment:post}
+    defaults: { _controller: UserBundle:Comment:post }
 
 tours:
     path:   /tours
-    defaults: { _controller: AppBundle:Tours:tours}
+    defaults: { _controller: AppBundle:Tours:tours }
 
 discographie:
     path:    /discographie
-    defaults: { _controller: AppBundle:Disco:album}
+    defaults: { _controller: AppBundle:Disco:album }
 
 vote:
     path:    /vote
-    defaults: { _controller: AppBundle:Disco:vote}
+    defaults: { _controller: AppBundle:Disco:vote }
 
 biographie:
     path:    /biographie
-    defaults: { _controller: AppBundle:Biographie:biographie}
+    defaults: { _controller: AppBundle:Biographie:biographie }
 
 chroniques:
     path:    /chroniques
-    defaults: { _controller: AppBundle:Review:review}
+    defaults: { _controller: AppBundle:Review:review }
 
 interviews:
     path:    /interviews
-    defaults: { _controller: AppBundle:Intw:intw}
+    defaults: { _controller: AppBundle:Intw:intw }
+
+#contact:
+    #path:    /contact
+    #defaults: { _controller: UserBundle:Emailer:send }
