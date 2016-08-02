@@ -58,6 +58,6 @@ interviews:
     path:    /interviews
     defaults: { _controller: AppBundle:Intw:intw }
 
-#contact:
-    #path:    /contact
-    #defaults: { _controller: UserBundle:Emailer:send }
+contact:
+    path:    /contact
+    defaults: { _controller: UserBundle:Emailer:send }

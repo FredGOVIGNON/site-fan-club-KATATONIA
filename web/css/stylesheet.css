@@ -87,7 +87,7 @@ body {
 }
 
 .nv-link {
- 	color: rgb(207,0,15) !important;
+ 	color: rgba(207,0,15, 0.8) !important;
     font-size: 18px;
 }
 
@@ -236,10 +236,20 @@ body {
 .image-groupe{
     position: relative;
     width: 100%;
+    opacity: 0.9;
 }
 
 .image-index{
     z-index: 2;
+}
+
+.glyphicon-flash{
+    width: 500%;
+    text-align: center;
+}
+
+.flash{
+    margin-left: -26px;
 }
 
 #parallaxWrapper {
@@ -259,7 +269,11 @@ body {
     width:200px; height:200px;
     background:url(.img/katatoniarond.jpg) no-repeat; }
 
+.intro-title{
+    margin-top: -30px;
+}
 
+/*
 .mouse {
     position: relative;
     display: inline-block;
@@ -278,7 +292,7 @@ body {
     left: 0;
     right: 0;
     text-align: center;
-}
+}*/
 
 
 .petit-logo-katatonia{
@@ -312,8 +326,8 @@ body {
 /* BASE Sidebar Styles */
 
 #empty-navbar{
-    height: 172px;
-    background-color: blue;
+    height: 188px;
+    background-color: rgba(207, 0, 15, 0.8);
     display: block;
 }
 
@@ -598,6 +612,29 @@ h3{
 
 .menu-disco{
     text-align: center;
+    padding-top: 20px;
+}
+
+.rowdisco{
+    margin-bottom: 100px;
+}
+
+.js-scrollTo{
+    color:#333;
+    padding-right: 30px;
+}
+
+.photo-dance{
+    width: 40%;
+    border-radius: 160px;
+    text-align: center;
+}
+
+.photo-livre{
+    width: 40%;
+    height: 300px;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .row2{
@@ -641,7 +678,7 @@ th, td{
 }
 
 .album_signing{
-    width: 80%;
+    width: 90%;
     border-radius: 160px;
 }
 
@@ -655,20 +692,37 @@ th, td{
 
 /* CSS BIOGRAPHIE */
 
+.menu-bio{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.rowbio{
+    margin-bottom: 100px;
+}
+
+
 .katatonia-vin{
     text-align:center;
 }
 
 .photo-vin{
-    width: 20%;
+    width: 40%;
     border-radius: 160px;
     text-align: center;
 }
 
+.photo-groupe-biere{
+    width: 40%;
+    border-radius: 160px;
+    text-align: center;
+}
+
+
 .photo-logos-groupe{
     width: 60%;
     border-radius: 20px;
-    margin-top: -10px;
+    margin-top: -20px;
 }
 
 .photo-groupe-2016{
@@ -696,20 +750,6 @@ th, td{
     position:relative;
 }
 
-.bouton a {
-display: block;
-width: 150px;
-line-height: 50px;
-text-align: center;
-vertical-align: middle;
-background: url(/img.bouton-noir.png) repeat;
-color: white;
-text-decoration: none;
-}
-
-.bouton a:hover {
-background: url(/img/bouton-noir-2.png) no-repeat;
-}
 
 /* CSS CHRONIQUES */
 
@@ -785,28 +825,28 @@ background: url(/img/bouton-noir-2.png) no-repeat;
     width: 40%;
 }
 
-.groupe-biere{
+.oeil-groupe{
     width: 40%;
 }
 
-.photo-groupe-biere{
+.photo-oeil-groupe{
     width: 60%;
     border-radius: 160px;
-}
-
-.groupe-biere{
-    margin-top: -20px;
 }
 
 .thatsallfolks{
     border-radius: 30px;
     width: 70%;
-    margin-bottom: 50px;
+    margin-bottom: 5px;
 }
 .ref-disco{
-    margin-top: 80px;
+    margin-top: 3px;
 }
 
 .nightintwcover{
-    width: 80%;
+    width: 18%;
+}
+
+.endintw1{
+    margin-bottom: 20px;
 }

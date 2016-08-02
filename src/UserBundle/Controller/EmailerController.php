@@ -1,5 +1,18 @@
 <?php
 
+namespace UserBundle\Controller;
+
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
+class EmailerController extends Controller
+{
+    public function sendAction()
+    {
+        return $this->render('UserBundle:Emailer:contact.html.twig');
+    }
+}
+
+
 /*
  * This file is part of the FOSUserBundle package.
  *
