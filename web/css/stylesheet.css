@@ -242,6 +242,73 @@ body {
     z-index: 2;
 }
 
+#parallaxWrapper {
+    position:relative; /* Référence aux enfants en absolute */
+    width:610px; height:350px; }
+
+#parallaxWrapper [class*="px"] { /* Cible tous les enfants contenant la chaine "px" */
+    visibility:hidden; /* Plugin feature ! (voir les explications) */
+    position:absolute; }
+
+#parallaxWrapper .pxBackground {
+    top:0; left:0; bottom:0; right:0; /* Alternative à top:0; left:0; width:100%; height:100%; */
+    background:#070707 url(.img/1024px-Katatonia_in_2004.jpg) no-repeat; }
+
+#parallaxWrapper .pxSprite {
+    top:-100px; right:100px; /* Position initiale de l’élément */
+    width:200px; height:200px;
+    background:url(.img/katatoniarond.jpg) no-repeat; }
+
+
+.mouse {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 45px;
+    border: 2px solid #fff;
+    border-radius: 23px;
+    cursor: pointer;
+    opacity: .7;
+    margin-top: 1px;
+}
+
+.intro-actions {
+    position: absolute;
+    bottom: 130px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+
+.petit-logo-katatonia{
+    border-radius: 20px;
+}
+
+.glyphicon-hand-right {
+    margin-bottom: -60px !important;
+}
+
+.tuska-banniere{
+    width: 78%;
+}
+
+.metal-hammer-couv{
+    width: 38%;
+}
+
+.kerrang-couv{
+    width: 40%;
+}
+
+.charts-billboard{
+    width: 78%;
+}
+
+.fallofhearts-HDcover{
+    width: 79%;
+}
+
 /* BASE Sidebar Styles */
 
 #empty-navbar{
@@ -353,16 +420,11 @@ select{
 
 #myBtn{
     width: 14%;
-    margin-left: 58px;
+    margin-left: 100px;
     border-radius: 10px;
     background-color: #D2D7D3;
 }
 
-.glyphicon-hand-right {
-    margin-left: -60px;
-    width: 10%;
-    padding-left: 110px;
-}
 
 .modal-header {
     padding: 2px 16px;
@@ -488,14 +550,6 @@ h3{
     margin-left: 80px;
 }
 
-.photo-groupe-biere{
-    width: 58%;
-    border-radius: 20px;
-}
-
-.biere{
-    margin-top: -20px;
-}
 
 /* CSS TOURNEES */
 
@@ -540,6 +594,11 @@ h3{
 }
 
 /* CSS ALBUM-DISCOGRAPHIE */
+
+
+.menu-disco{
+    text-align: center;
+}
 
 .row2{
     padding-bottom: 50px;
@@ -654,6 +713,10 @@ background: url(/img/bouton-noir-2.png) no-repeat;
 
 /* CSS CHRONIQUES */
 
+.chro1{
+    padding-bottom: 30px;
+}
+
 .nightcover{
     width: 80%;
 }
@@ -667,12 +730,20 @@ background: url(/img/bouton-noir-2.png) no-repeat;
     width: 20px;
 }
 
+.titre-metalobs{
+    padding-left: 56px;
+}
+
+.titre-noiseweb{
+    padding-left: 50px;
+}
+
 .metalobscover35{
-    width: 120%;
+    width: 130%;
 }
 
 .logo-noise-web{
-    width: 120%;
+    width: 130%;
     height: 150px;
     border-radius: 20px;
 }
@@ -682,7 +753,7 @@ background: url(/img/bouton-noir-2.png) no-repeat;
 }
 
 .autres-chros{
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 /* CSS INTERVIEWS */
@@ -695,6 +766,7 @@ background: url(/img/bouton-noir-2.png) no-repeat;
     width: 80%;
     height: 600px;
     border-radius: 20px;
+
 }
 
 .txt-intw1{
@@ -713,6 +785,28 @@ background: url(/img/bouton-noir-2.png) no-repeat;
     width: 40%;
 }
 
+.groupe-biere{
+    width: 40%;
+}
+
+.photo-groupe-biere{
+    width: 60%;
+    border-radius: 160px;
+}
+
+.groupe-biere{
+    margin-top: -20px;
+}
+
+.thatsallfolks{
+    border-radius: 30px;
+    width: 70%;
+    margin-bottom: 50px;
+}
 .ref-disco{
     margin-top: 80px;
+}
+
+.nightintwcover{
+    width: 80%;
 }

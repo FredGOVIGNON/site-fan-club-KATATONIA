@@ -2,8 +2,157 @@
 
 {% block body %}
 
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="jquery.parallax.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$('.pxBackground').parallax();
+		$('.pxSprite').parallax({
+			'coeff' : -0.4,
+			'type' : 'sprite'
+		});
+	});
+	{#$('a[href^="#"]').click(function(){
+	var the_id = $(this).attr("href");
+
+	$('html, body').animate({
+		scrollTop:$(the_id).offset().top
+	}, 'slow');
+	return false;
+});#}
+
+
+
+</script>
+
+<div id="parallaxWrapper">
+	<div class="pxBackground"></div>
+	<div class="pxSprite"></div>
+</div>
+
+
+<div class="intro">
+	<figure class="intro-image" data-hq="{{ asset('img/1024px-Katatonia_in_2004.jpg') }}" data-lq="{{ asset('img/1024px-Katatonia_in_2004.jpg') }}"></figure><!-- /.intro-image -->
+	<img src="{{ asset('img/1024px-Katatonia_in_2004.jpg') }}" alt="photo groupe Katatonia" class="image-groupe">
+
+	<div class="intro-content">
+		<div class="shell">
+			<h5 class="title title-lg">Welcome</h5>
+			
+			<h1 class="intro-title">
+				High-end <strong>Coding Services</strong>			</h1><!-- /.intro-title -->
+			
+			<div class="intro-entry">
+				<p>
+					A web development agency, focused on long-term partnerships, specializing in tailor-made front-end, wordpress and email development.				
+				</p>
+			</div><!-- /.intro-entry -->
+		</div><!-- /.shell -->
+	</div><!-- /.intro-content -->
+ 
+ {#<a href="#contact">Contact</a>
+<!-- plus loin dans la page -->
+<h2 id="contact">Contact</h2>
+
+{#<div class="intro-index">
 <div class="image-index">
     <img src="{{ asset('img/1024px-Katatonia_in_2004.jpg') }}" alt="photo groupe Katatonia" class="image-groupe">
+</div>#}
+
+<div class="intro-actions" style="opacity: 0.899;">
+	<span class="mouse btn-scroll">
+		<span class="mouse-dot"></span>
+	</span>
 </div>
+</div>
+
+
+</br></br>
+
+<div class="breaking news" style="text-align:center">
+	<h2><span class="glyphicon glyphicon-info-sign"></span><u>BREAKING NEWS</u></h2>
+</div>
+</br></br>
+<div class="col-md-12 news1">
+		<div class="col-md-3 col-md-offset-1 petit-logo-katatonia">
+			<img src="{{ asset('img/katatoniarond.jpg') }}" alt="petit logo Katatonia" class="petit-logo-kat">
+		</div>
+		<div class="col-md-7 new1">
+			<p><span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>KATATONIA : "Enfin !!! Nous sommes ravis d'annoncer notre première tournée australienne en tête d'affiche. Ci-dessous les dates confirmées. Les préventes commencent 13 Juillet à 9h00 et les billets sont disponibles <a href="http://www.metropolistouring.com/katatonia">ici</a>."</br>
+			<ul>
+				<li>7th December, BRISBANE, The Triffid</li>
+				<li>8th December, SYDNEY, Manning Bar</li>
+				<li>9th December, ADELAIDE, The Gov</li>
+				<li>10th December, MELBOURNE Corner Hotel</li>
+				<li>11th December, PERTH, Capitol</li>
+			</ul>
+			Rendez-vous est pris !
+			</p>
+			</br>
+		</div>
+		<div class="col-md-1"></div>
+</div></br>
+<div class="col-md-12 news2">
+		<div class="col-md-3 col-md-offset-1 petit-logo-katatonia">
+			<img src="{{ asset('img/katatoniarond.jpg') }}" alt="petit logo Katatonia" class="petit-logo-kat">
+		</div>
+		<div class="col-md-7 new3">
+			<p><span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>KATATONIA en concert au Tuska Open Air Festival, le plus grand festival scandinave de Métal. Rendez-vous le 3 juillet 2016 en Finlande !</br></br>
+			<img src="{{ asset('img/tuska-fest.jpg') }}" alt="affiche Tuska Open Air Fest" class="tuska-banniere">
+			</p>
+			</br>
+		</div>
+		<div class="col-md-1"></div>
+</div></br>
+<div class="col-md-12 news3">
+		<div class="col-md-3 col-md-offset-1 petit-logo-katatonia">
+			<img src="{{ asset('img/katatoniarond.jpg') }}" alt="petit logo Katatonia" class="petit-logo-kat">
+		</div>
+		<div class="col-md-7 new2">
+			<p><span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>Intégralité du live de 2013 "Last Fair Day Gone Night". Enjoy it ! ;-)</br></br> 
+			<iframe width="550" height="400" src="https://www.youtube.com/embed/u_QRS_tyUDg" frameborder="0" allowfullscreen></iframe>
+			</p>
+			</br>
+		</div>
+		<div class="col-md-1"></div>
+</div></br>
+<div class="col-md-12 news4">
+		<div class="col-md-3 col-md-offset-1 petit-logo-katatonia">
+			<img src="{{ asset('img/katatoniarond.jpg') }}" alt="petit logo Katatonia" class="petit-logo-kat">
+		</div>
+		<div class="col-md-7 new3">
+			<p><span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>KATATONIA : très bon démarrage des ventes lors de la sortie du nouvel album Fall Of Hearts </br>(Peaceville Rec./Wagram Music) le 21 mai 2016 !</br></br>
+			<img src="{{ asset('img/charts.jpg') }}" alt="charts Fall of Hearts" class="charts-billboard">
+			</p>
+			</br>
+		</div>
+		<div class="col-md-1"></div>
+</div></br>
+<div class="col-md-12 news5">
+		<div class="col-md-3 col-md-offset-1 petit-logo-katatonia">
+			<img src="{{ asset('img/katatoniarond.jpg') }}" alt="petit logo Katatonia" class="petit-logo-kat">
+		</div>
+		<div class="col-md-7 new4">
+			<p><span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>KATATONIA : en couverture des plus grands magazines spécialisés Métal en Europe ce printemps :</br> METAL HAMMER Espagne, et KERRANG en Grande-Bretagne !</p>
+			<a href="http://pdfmag.org/90338-metal-hammer-spain-mayo-2016/"><img src="{{ asset('img/Metal-hammer.jpg') }}" alt="couverture Metal Hammer" class="metal-hammer-couv"></a>
+			<a href="http://www.kerrang.com/"><img src="{{ asset('img/Kerrang.jpg') }}" alt="couverture Kerrang" class="kerrang-couv"></a></br></br>
+		</div>
+		<div class="col-md-1"></div>
+</div></br>
+<div class="col-md-12 news6">
+		<div class="col-md-3 col-md-offset-1 petit-logo-katatonia">
+			<img src="{{ asset('img/katatoniarond.jpg') }}" alt="petit logo Katatonia" class="petit-logo-kat">
+		</div>
+		<div class="col-md-7 new3">
+			<p><span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>Sortie du nouvel album studio de KATATONIA intitulé Fall Of Hearts </br>(Peaceville Rec./Wagram Music) le 21 mai 2016 !</br></br>
+			<img src="{{ asset('img/Katatonia_-_Fall_Of_Hearts_-_Medium_Res_Cover.jpg') }}" alt="Fall of Hearts cover" class="fallofhearts-HDcover">
+			</p>
+			</br>
+		</div>
+		<div class="col-md-1"></div>
+</div></br>
+
 
 {% endblock %}

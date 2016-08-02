@@ -1,6 +1,26 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+
+
+<script>
+       $(document).ready(function() {
+              $('.js-scrollTo').on('click', function() { // Au clic sur un élément
+                     var page = $(this).attr('href'); // Page cible
+                     var speed = 750; // Durée de l'animation (en ms)
+                     $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+                     return false;
+              });
+       });
+</script>
+</br></br>
+<ul class="menu-disco">
+       <li><a class="js-scrollTo" href="#ss-titre-disco">DISCOGRAPHIE</a></li>
+       <li><a class="js-scrollTo" href="#ss-titre-biblio">BIBLIOGRAPHIE</a></li>
+</ul>
+
+
+
 <div class='conteneur col-md-12'></br></br></br></br></br>
        <div class="row2 col-md-12 ">
               <div class="col-md-1"></div>
@@ -53,7 +73,7 @@
        </div>
 
        <div>
-              <h1><span class="glyphicon glyphicon-cd"></span><u> DISCOGRAPHIE </u><span class="glyphicon glyphicon-cd azerty"></span></h1></br></br></br></br>
+              <h1 id="ss-titre-disco"><span class="glyphicon glyphicon-cd"></span><u> DISCOGRAPHIE </u><span class="glyphicon glyphicon-cd azerty"></span></h1></br></br></br></br>
        </div>
        <div class="albums col-lg-12">
        	<div class="table offset-1-col-lg-10">
@@ -158,7 +178,7 @@
        <img src="{{ asset('img/katatonia-sousuncieldeplomb.jpg') }}" class="katatonia-livre-cover">
        </div>
        <div class="col-md-7 pitch-livre">
-       <p><b>KATATONIA</b></br>
+       <p id="ss-titre-biblio"><b>KATATONIA</b></br>
        Sous un ciel de plomb</br>
        (Edition Camion blanc/© 2015)</br>
        <u>Résumé</u> : Formé en 1991 par Jonas Renkse et Anders Nyström, Katatonia est le reflet de l’atmosphère ténébreuse qui règne à cette époque en Suède et qui contribue au développement d’un genre musical teinté de nuances gris noir. Hier formation de Doom Death réservée à quelques spécialistes, désormais groupe de Rock/Métal aux contours sonores plus modernes et accessibles, Katatonia possède, tel le dieu Janus de la Rome antique, deux visages biens distincts : le premier représente le passé, l’autre l’avenir. La dimension musicale de la formation suédoise ne s’est toutefois jamais départie de la noirceur et de la mélancolie qu’égrène chaque note de sa musique. Une posture idéologique qui, loin de consacrer son succès commercial, a néanmoins conféré à Katatonia un statut de formation emblématique, pour ne pas dire culte, de la scène Métal. Après un premier essai sur Opeth, Nicolas Bénard, docteur en histoire, et Robert Culat, prêtre catholique, proposent une nouvelle monographie à quatre mains qui vise à illustrer l’originalité de la scène métal suédoise.
