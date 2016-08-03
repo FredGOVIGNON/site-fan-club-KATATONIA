@@ -189,14 +189,14 @@ body {
 }
 
 #page-content-wrapper {
-    width: 100%;
+    min-width: 100%;
     position: fixed;
     height: 190px;
     z-index: 1;
 }
 
 #wrapper.toggled #page-content-wrapper {
-    position: absolute;
+    position: fixed;
     margin-right: -250px;
 }
 
@@ -222,6 +222,10 @@ body {
 
 .fa-youtube-square{
     padding-right: 10px;
+}
+
+.social-logos{
+    padding-right: 80px;
 }
 
 .social-link{
@@ -273,26 +277,41 @@ body {
     margin-top: -30px;
 }
 
-/*
+
 .mouse {
     position: relative;
     display: inline-block;
     width: 30px;
-    height: 45px;
+    height: 50px;
     border: 2px solid #fff;
     border-radius: 23px;
     cursor: pointer;
     opacity: .7;
-    margin-top: 1px;
+}
+
+.mouse-dot {
+    position: absolute;
+    display: block;
+    top: 29%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    margin: -3px 0 0 -3px;
+    background: #fff;
+    border-radius: 50%;
+    -webkit-animation: ani-mouse 2.5s linear infinite;
+    animation: ani-mouse 2.5s linear infinite;
+
 }
 
 .intro-actions {
     position: absolute;
-    bottom: 130px;
+    bottom: 5px;
     left: 0;
     right: 0;
     text-align: center;
-}*/
+    margin-top: 100px;
+}
 
 
 .petit-logo-katatonia{
@@ -321,6 +340,25 @@ body {
 
 .fallofhearts-HDcover{
     width: 79%;
+}
+
+.scrollup {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    display: none;
+    color: white;
+    background-color: #3a3f51;
+    border: 1px solid #3a3f51;
+    font-size: 20px;
+    text-align: center;
+    line-height: 37px;
+}
+ 
+.scrollup:hover {
+    color: white;
 }
 
 /* BASE Sidebar Styles */
