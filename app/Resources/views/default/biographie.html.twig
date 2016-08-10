@@ -122,8 +122,34 @@ Le 7 Mars 2016, il est annoncé que <strong>Katatonia</strong> sort son nouvel a
 	<img src="{{ asset('img/photo_drumkit.png') }}" class="photo-drumkit"></br>
 	</div>
 	<div class="col-md-1">
+    <a href=".menu-bio" title="bas de page" class="scrollup"><i class="fa fa-arrow-up"></i></a>
 	</div>
+    <script>
+    ScrollToTop=function() {
+      var s = $(window).scrollTop();
+      if (s > 250) {
+        $('.scrollup').fadeIn();
+      } else {
+        $('.scrollup').fadeOut();
+      }
+     
+      $('.scrollup').click(function () {
+          $("html, body").animate({ scrollTop: 0 }, 500);
+          return false;
+      });
+    }
+     
+    StopAnimation=function() {
+      $("html, body").bind("scroll mousedown DOMMouseScroll mousewheel keyup", function(){
+        $('html, body').stop();
+      });
+    }
+     
+    $(window).scroll(function() {
+      ScrollToTop();
+      StopAnimation();
+    });
+    </script>
 </div>
-
 
 {% endblock %}

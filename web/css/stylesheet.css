@@ -299,8 +299,8 @@ body {
     margin: -3px 0 0 -3px;
     background: #fff;
     border-radius: 50%;
-    -webkit-animation: ani-mouse 2.5s linear infinite;
-    animation: ani-mouse 2.5s linear infinite;
+    -webkit-animation: ani-mouse 5s linear infinite;
+    animation: ani-mouse 5s linear infinite;
 
 }
 
@@ -471,7 +471,7 @@ select{
 
 
 #myBtn{
-    width: 14%;
+    width: 45%;
     margin-left: 100px;
     border-radius: 10px;
     background-color: #D2D7D3;

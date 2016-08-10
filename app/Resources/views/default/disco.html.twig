@@ -13,7 +13,6 @@
               });
        });
 </script>
-</br>
 
 <div class="menu-disco">
        <div class="rowdisco col-md-12">
@@ -47,19 +46,14 @@
                      <tr>
                             <th>album </th>
                             <th>note </th>
-                     </tr>   
-                     {% for album in albums %}
-                            <tr>
-                                   {% set totalvote = 0 %}
-                                   {% for vote in allVote %}
-                                          {% if album.id == vote.idalbum %}
-                                                 {% set totalvote = totalvote + vote.value %}
-                                          {% endif %}
-                                   {% endfor %}
+                     </tr>
 
-                                   <td class="datavote">{{ album.nom }}</td>
-                                   <td >{{ totalvote }}</td>
+                     {% for value in tab %}
+                            <tr>
+                                   <td class="datavote">{{ value.album }}</td>
+                                   <td >{{ value.vote }}</td>
                             </tr>
+
                      {% endfor %}              
 
                            {#  <td>The Fall Of Hearts (album studio) : {{ vote.value }}</td>
@@ -195,5 +189,37 @@
        </br>
        </div>
        </div>
+
+              <div class="col-md-12">
+                     <a href=".menu-disco" title="bas de page" class="scrollup"><i class="fa fa-arrow-up"></i></a>
+              </div>
+<script>
+ScrollToTop=function() {
+  var s = $(window).scrollTop();
+  if (s > 250) {
+    $('.scrollup').fadeIn();
+  } else {
+    $('.scrollup').fadeOut();
+  }
+ 
+  $('.scrollup').click(function () {
+      $("html, body").animate({ scrollTop: 0 }, 500);
+      return false;
+  });
+}
+ 
+StopAnimation=function() {
+  $("html, body").bind("scroll mousedown DOMMouseScroll mousewheel keyup", function(){
+    $('html, body').stop();
+  });
+}
+ 
+$(window).scroll(function() {
+  ScrollToTop();
+  StopAnimation();
+});
+</script>
+
+
 </div>
 {% endblock %}

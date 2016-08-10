@@ -7,19 +7,40 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use AppBundle\Entity\Vote;
+use AppBundle\Entity\Album;
 
 class DiscoController extends Controller
 {
-    public function albumAction(Request $request)
+    public function albumAction()
     {
     	$em=$this->getDoctrine()->getManager();
-        $allVote = $em->getRepository('AppBundle:Vote')->findAll();
         $albums = $em->getRepository('AppBundle:Album')->findAll();
 
-        return $this->render('default/disco.html.twig', array(
-            'allVote' => $allVote,
-            'albums' => $albums,
-        ));
+        $tabVote = [];
+        $nbVoteTotal = 0;
+        
+        foreach ($albums as $album)
+        {
+            $thisVote = count($em->getRepository('AppBundle:Vote')->findByIdalbum($album->getId()));
+            $tabVote[] = array(
+                'album' => $album->getNom(),
+                'vote' => $thisVote
+            );
+
+            $nbVoteTotal += $thisVote;
+
+            foreach ($tabVote as $key => $row) {
+                $nomAlbum[$key]  = $row['album'];
+                $vote[$key] = $row['vote'];
+            }
+            
+            array_multisort($vote, SORT_DESC, $nomAlbum, $tabVote);
+        }
+
+        //ajout de la liste des albums pour le système de vote//
+        $listVote= $em->getRepository('AppBundle:Album')->findAll();
+        
+        return $this->render('default/disco.html.twig', array('tab'=>$tabVote, 'albums'=>$listVote));
     }
 
     public function voteAction(Request $request)

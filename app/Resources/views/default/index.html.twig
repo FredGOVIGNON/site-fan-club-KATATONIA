@@ -10,8 +10,14 @@
                      $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
                      return false;
               });
+              //  setInterval(function() {
+              //     $('.mouse-dot').animate( {
+
+              //     }
+              // });
        });
 </script>
+
 
 
 {# <div id="parallaxWrapper">
@@ -23,8 +29,8 @@
 <div class="intro">
 	<figure class="intro-image" data-hq="{{ asset('img/1024px-Katatonia_in_2004.jpg') }}" data-lq="{{ asset('img/1024px-Katatonia_in_2004.jpg') }}"></figure><!-- /.intro-image -->
 	<img src="{{ asset('img/1024px-Katatonia_in_2004.jpg') }}" alt="photo groupe Katatonia" class="image-groupe">
-	<div class="intro-actions" style="opacity: 0.9;">
-	<a class="js-scrollTo" href=".intro-entry">
+	<div class="intro-actions" style="opacity: 0.8;">
+	<a class="js-scrollTo" href=".intro-title">
 	<span class="mouse btn-scroll animated infinite bounce">
 		<span class="mouse-dot"></span>
 	</span>
@@ -33,12 +39,12 @@
 </div>
 <div id="intro-content">
 		<div class="shell">
-			
+			<!-- /.intro-title -->
 			<h1 class="intro-title">
 				<strong>Bienvenue sur le site officiel du fan-club francophone de Katatonia !</strong>
-			</h1><!-- /.intro-title -->
+			</h1>
 
-			<div class="intro-entry">
+			<div id="intro-entry" class="intro-entry">
 				<h3>
 					Merci d'avoir souscrit à ce site dédié aux fans francophones de Katatonia.</br> Retrouvez-y toutes les informations officielles du groupe (news, tournées, etc.) ainsi ques </br>des chroniques et interviews exclusives et si vous êtes sages quelques pépites et autres petites surprises... ;-)		
 				</h3>
