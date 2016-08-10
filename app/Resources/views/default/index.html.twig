@@ -17,7 +17,25 @@
               // });
        });
 </script>
+<script>
 
+
+    $(document).ready(function()
+    {
+        setInterval(function()
+        {
+            $(".mouse-dot").animate(
+            {
+                opacity: 0.2,
+                marginTop: "+=30",
+            }, 500, function() 
+            {
+                $(".mouse-dot").css("margin-top", "10px");
+                $(".mouse-dot").css("opacity", "1");
+            });
+        }, 2000);
+    });
+</script>
 
 
 {# <div id="parallaxWrapper">
@@ -26,14 +44,13 @@
 </div>
  #}
 
-<div class="intro">
-	<figure class="intro-image" data-hq="{{ asset('img/1024px-Katatonia_in_2004.jpg') }}" data-lq="{{ asset('img/1024px-Katatonia_in_2004.jpg') }}"></figure><!-- /.intro-image -->
-	<img src="{{ asset('img/1024px-Katatonia_in_2004.jpg') }}" alt="photo groupe Katatonia" class="image-groupe">
-	<div class="intro-actions" style="opacity: 0.8;">
+<div class="intro"><!-- /.intro-image -->
+    <img src="{{ asset('img/1024px-Katatonia_in_2004.jpg') }}" alt="photo groupe Katatonia" class="image-groupe">
+	<div class="intro-actions" style="opacity: 0.9;">
 	<a class="js-scrollTo" href=".intro-title">
-	<span class="mouse btn-scroll animated infinite bounce">
-		<span class="mouse-dot"></span>
-	</span>
+	<div class="mouse btn-scroll animated infinite bounce">
+		<div class="mouse-dot"></div>
+	</div>
 	</a>
 	</div>
 </div>

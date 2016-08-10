@@ -28,8 +28,9 @@
     color: #333;
 }
 
-.btn{
+.btn-black{
     background-color: black;
+    border-color:black;
 }
 
 body {
@@ -143,8 +144,10 @@ body {
 }
 
 #menu-toggle{
-    padding-left: 20px;
-    height: 50px;
+    padding-left: 2px;
+    padding-right: 10px;
+    height: 70px;
+    width: 320px;
 }
 
 .gif{
@@ -154,7 +157,8 @@ body {
 
 .katatonia_small_logo{
     height: 50px;
-    width: 400px;
+    width: 105%;
+    padding-bottom: 10px;
 }
 
 #wrapper {
@@ -191,9 +195,13 @@ body {
 #page-content-wrapper {
     min-width: 100%;
     position: fixed;
-    height: 190px;
+    height: 100px;
     z-index: 1;
 }
+
+/*.shake-opacity{
+    height: 660px;
+}*/
 
 #wrapper.toggled #page-content-wrapper {
     position: fixed;
@@ -241,6 +249,7 @@ body {
     position: relative;
     width: 100%;
     opacity: 0.9;
+    margin-bottom:-450px;
 }
 
 .image-index{
@@ -276,7 +285,9 @@ body {
 .intro-title{
     margin-top: -30px;
 }
-
+#intro-content {
+    margin-top:300px;
+}
 
 .mouse {
     position: relative;
@@ -289,23 +300,18 @@ body {
     opacity: .7;
 }
 
-.mouse-dot {
-    position: absolute;
-    display: block;
-    top: 29%;
-    left: 50%;
-    width: 6px;
-    height: 6px;
-    margin: -3px 0 0 -3px;
-    background: #fff;
-    border-radius: 50%;
-    -webkit-animation: ani-mouse 5s linear infinite;
-    animation: ani-mouse 5s linear infinite;
 
+.mouse-dot{
+    position: relative;
+    height: 10px;
+    width: 10px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    margin: auto;
+    margin-top: 10px;
 }
 
 .intro-actions {
-    position: absolute;
     bottom: 5px;
     left: 0;
     right: 0;
@@ -364,7 +370,7 @@ body {
 /* BASE Sidebar Styles */
 
 #empty-navbar{
-    height: 188px;
+    height: 100px;
     background-color: rgba(207, 0, 15, 0.8);
     display: block;
 }
@@ -433,7 +439,7 @@ body {
     }
 
     #page-content-wrapper {
-        padding: 20px;
+        padding: 10px;
         position: fixed;
         width: 100%;
     }
@@ -471,8 +477,8 @@ select{
 
 
 #myBtn{
-    width: 45%;
-    margin-left: 100px;
+    width: 50%;
+    margin-left: 80px;
     border-radius: 10px;
     background-color: #D2D7D3;
 }
@@ -660,6 +666,7 @@ h3{
 .js-scrollTo{
     color:#333;
     padding-right: 30px;
+    padding-top:-50px;
 }
 
 .photo-dance{

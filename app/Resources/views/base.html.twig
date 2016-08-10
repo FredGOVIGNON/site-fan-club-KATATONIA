@@ -65,17 +65,23 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-                <div class="col-lg-6 shake-opacity">
-                    <div class="shake-opacity"></div>
-                    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><img class="gif" src="{{ asset('img/aniarm.gif') }}" align="left">{#<span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>#} Menu</a>
-                </br></br>
+                <div class="col-lg-4 shake-slow">
+                    <div>
+                    {#<a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><img class="gif" src="{{ asset('img/aniarm.gif') }}" align="left">{#<span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span> Menu</a>#}
+                 
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">
                     <h4><img src="{{ asset('img/Katatonia_logo.png') }}" class="katatonia_small_logo"></h4>
+                    </a>
+                    </div>
+                    <div>
+                    
                     <p>
                     <a href="./biographie"><font color="black"><i>Il était une fois un groupe en Suède...</i></font></a>
                     </p>
+                    </div>
                 </div>
                 
-                <div class="col-lg-6 social-logos">
+                <div class="col-lg-8 social-logos">
                     <a href="https://twitter.com/KatatoniaBand" class="social-link fa fa-twitter-square fa-3x"></a>
                     <a href="https://www.instagram.com/katatoniaband" class="social-link fa fa-instagram fa-3x"></a>
                     <a href="https://www.facebook.com/katatonia" class="social-link fa fa-facebook-square fa-3x"></a>
@@ -83,16 +89,16 @@
                     <a href="https://play.spotify.com/artist/2CWWgbxApjbyByxBBCvGTm?play=true&utm_source=open.spotify.com&utm_medium=open" class="social-link fa fa-spotify fa-3x"></a>
                     <a href="https://www.youtube.com/watch?v=IIGBNc2nFZA&list=PLxsON2ToJlc4iWILkjDvklr1PnQO9x30n" class="social-link fa fa-youtube-square fa-3x"></a>
                     <a href="https://soundcloud.com/katatonia" class="social-link fa fa-soundcloud fa-3x"></a>
-                </div>
+                
+{#                 </br>
                 </br>
                 </br>
-                </br>
-                </br>
-                <div>
+                </br> #}
+                
                        <!-- Trigger/Open The Modal -->
 
                     {#<button id="myBtn"><span class="glyphicon glyphicon-hand-right"></span>Votez pour votre album préféré !<span class="glyphicon glyphicon-heart" aria-hidden="true"></span></button>#}
-                    <div class="shake shake-constant">
+                    <div class="shake shake-rotate">
                       <img id="myBtn" src="{{ asset('img/boutondevoteaveccoeur.png') }}" class="boutongimp" aria-hidden="true" style="cursor:pointer;">
                     </div>
                         <!-- The Modal -->
